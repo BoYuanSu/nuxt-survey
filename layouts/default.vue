@@ -1,8 +1,19 @@
 <template>
   <div>
+    <NavAll></NavAll>
     <Nuxt />
   </div>
 </template>
+
+<script>
+import NavAll from "@/components/NavAll"
+export default {
+  components: {
+    NavAll
+  }
+
+}
+</script>
 
 <style>
 html {
