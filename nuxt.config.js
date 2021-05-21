@@ -39,7 +39,23 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/router',
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+    baseURL: 'http://localhost:4000', // Used as fallback if no runtime config is provided
+  },
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL // BROWSER_BASE_URL for client side requests.
+    }
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL   // BASE_URL for server side requests.
+    }
+  },
   routerModule: {
     /* module options */
     fileName: 'router'
