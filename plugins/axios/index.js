@@ -1,6 +1,6 @@
 export default ({ redirect, $axios }) => {
   $axios.onRequest((config) => {
-    console.log('test onRequest', config)
+    console.log('test onRequest')
     // 向请求头中塞入 token
     config.headers.token = 'xxx'
     // 向参数中塞入 token
@@ -15,12 +15,16 @@ export default ({ redirect, $axios }) => {
       data.token = 'sss2'
       config.data = data
     }
-    console.log('test onRequest2', config)
+    console.log('test onRequest2')
+  })
+
+  $axios.onRequest((config) => {
+    console.log('test onRequest3')
   })
 
   $axios.onResponse((res) => {
     // 返回数据逻辑处理
-    console.log('test onResponse', res)
+    console.log('test onResponse')
     if (res.data.code === 1) {
       // 重定向到 login 页
       redirect('/login')
