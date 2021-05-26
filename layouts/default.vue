@@ -8,6 +8,7 @@
 <script>
 import NavAll from "@/components/NavAll"
 export default {
+  name: "default",
   components: {
     NavAll
   }

@@ -32,6 +32,10 @@ export function createRouter() {
         ]
       },
       {
+        path: '/bugs',
+        component: () => import('~/pages/bugs').then(m=>m.default)
+      },
+      {
           path: '*',
           component: () => import('~/pages/_.vue').then(m=>m.default),
 

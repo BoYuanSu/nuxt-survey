@@ -7,6 +7,7 @@
     <a href="javascript:;" @click.prevent="$router.push('/lifecycle')" class="button--grey">lifecycle by a tag</a>
 
     <nuxt-link to="/users" class="button--grey" no-prefetch>users</nuxt-link>
+    <nuxt-link to="/bugs" class="button--grey" no-prefetch>bugs</nuxt-link>
   </div>
 </template>
 

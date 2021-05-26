@@ -20,7 +20,6 @@
     </section>
     <section>
       <AsyncData></AsyncData>
-      <!-- <RenderBug></RenderBug> -->
     </section>
   </div>
 </template>
@@ -30,13 +29,11 @@ import { mapState } from "vuex";
 import counter from "@/storeDynamic/counter";
 
 import AsyncData from "@/components/modules/AsyncData";
-import RenderBug from "@/components/modules/RenderBug";
 
 export default {
   layout: "mobile",
   components: {
-    AsyncData,
-    RenderBug
+    AsyncData
   },
   data() {
     return {
