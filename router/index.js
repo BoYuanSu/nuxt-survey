@@ -18,6 +18,10 @@ export function createRouter() {
         component: () => import('~/pages/about').then(m=>m.default)
       },
       {
+        path: '/lifecycle',
+        component: () => import('~/pages/lifecycle').then(m=>m.default)
+      },
+      {
         path: '/users',
         component: () => import('~/pages/users').then(m=>m.default),
         children: [

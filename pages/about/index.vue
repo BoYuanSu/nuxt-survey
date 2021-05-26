@@ -1,9 +1,6 @@
 <template>
   <div>
     about
-    <p>
-      {{ count }}
-    </p>
     <pre>
       store
       ├── README.md

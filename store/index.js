@@ -14,6 +14,6 @@ export const mutations = {
 
 export const actions = {
   nuxtServerInit({commit}, payload){
-    console.log("🚀 ~ file: index.js ~ line 17 ~ nuxtServerInit ~ nuxtServerInit")
+    console.log('🚀 ~ nuxtServerInit')
   }
 }
