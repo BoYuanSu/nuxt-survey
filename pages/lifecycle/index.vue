@@ -17,6 +17,7 @@
     <section>
       <h2>dynamic module 動態註冊模組</h2>
       <p>counter count: {{ count }}</p>
+      <button @click="refreshHandler">refresh</button>
     </section>
     <section>
       <AsyncData></AsyncData>
@@ -27,6 +28,7 @@
 <script>
 import { mapState } from "vuex";
 import counter from "@/storeDynamic/counter";
+import user from "@/store/user";
 
 import AsyncData from "@/components/modules/AsyncData";
 
@@ -37,7 +39,12 @@ export default {
   },
   data() {
     return {
-      title: "lifecycle"
+      title: "lifecycle",
+      posts: [
+        {
+          title: "test"
+        }
+      ]
     };
   },
   computed: {
@@ -51,9 +58,13 @@ export default {
     console.log("🚀 ~ validate");
     return true;
   },
-  asyncData() {
+  async asyncData(context) {
     console.log("🚀 ~ asyncData");
     console.log("🚀 ~ asyncData ~ 無法存取 this", this); // 無法存取 this
+    const posts = await context.$axios({
+      url: "/posts.json"
+    });
+    return { posts: posts.data };
   },
   // 舊版 fetch 設計
   async fetch_old({ app, store }) {
@@ -78,6 +89,9 @@ export default {
     console.log("🚀 ~ fetch ~ 可以存取 this.title", this.title);
     await this.$store.dispatch("user/GET_UUID");
     await this.$store.dispatch("counter/GET_COUNT");
+    await this.$axios({
+      url: "posts.json"
+    });
   },
   beforeMount() {
     console.log("🚀 ~ beforeMount");
@@ -85,10 +99,26 @@ export default {
   mounted() {
     console.log("🚀 ~ mounted");
   },
-  beforeDestroy() {
+  async beforeDestroy() {
     console.log("🚀 ~ beforeDestroy");
     if (this.$store.hasModule("counter")) {
       this.$store.unregisterModule("counter");
+    }
+  },
+  methods: {
+    refreshHandler() {
+      console.log(
+        "🚀 ~ refreshHandler ~ this.$fetchState.timestamp",
+        this.$fetchState.timestamp
+      );
+      if (!this.$fetchState.pending) {
+        this.$fetch();
+      } else {
+        console.log(
+          "🚀 ~ refreshHandler ~ this.$fetchState.pending",
+          this.$fetchState.pending
+        );
+      }
     }
   }
 };
