@@ -43,7 +43,7 @@ export default {
   ],
 
   axios: {
-    baseURL: 'http://localhost:4000', // Used as fallback if no runtime config is provided
+    baseURL: 'http://localhost:3000', // Used as fallback if no runtime config is provided
   },
   publicRuntimeConfig: {
     axios: {
