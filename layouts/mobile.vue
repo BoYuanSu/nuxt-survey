@@ -9,6 +9,7 @@
 import NavAll from '@/components/NavAll'
 
 export default {
+  name: 'Mobile',
   components: {
     NavAll
   }
