@@ -1,6 +1,6 @@
 <template>
   <div>
-      user page error
+    user page error
   </div>
 </template>
 

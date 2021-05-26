@@ -1,17 +1,17 @@
 <template>
   <div>
-    <RenderBug></RenderBug>
+    <RenderBug />
   </div>
 </template>
 
 <script>
-import RenderBug from "@/components/modules/RenderBug";
+import RenderBug from '@/components/modules/RenderBug'
 
 export default {
   components: {
     RenderBug
   }
-};
+}
 </script>
 
 <style></style>

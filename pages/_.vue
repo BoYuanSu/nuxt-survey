@@ -1,6 +1,6 @@
 <template>
   <div>
-      this is custom error
+    this is custom error
   </div>
 </template>
 

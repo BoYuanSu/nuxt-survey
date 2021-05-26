@@ -1,18 +1,18 @@
 <template>
   <div class="mobile">
-    <NavAll></NavAll>
+    <NavAll />
     <Nuxt />
   </div>
 </template>
 
 <script>
-import NavAll from "@/components/NavAll";
+import NavAll from '@/components/NavAll'
 
 export default {
   components: {
     NavAll
   }
-};
+}
 </script>
 
 <style>

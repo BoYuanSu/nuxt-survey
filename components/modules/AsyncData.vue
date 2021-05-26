@@ -6,13 +6,13 @@
 
 <script>
 export default {
-  asyncData() {
-    console.log("🚀 ~ Component asyncData ~ asyncData");
+  asyncData () {
+    console.log('🚀 ~ Component asyncData ~ asyncData')
   },
-  fetch() {
-    console.log("🚀 ~ Component fetch ~ fetch");
+  fetch () {
+    console.log('🚀 ~ Component fetch ~ fetch')
   }
-};
+}
 </script>
 
 <style></style>

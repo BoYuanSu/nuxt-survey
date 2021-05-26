@@ -1,14 +1,15 @@
 <template>
   <div>
-    <NavAll></NavAll>
+    <NavAll />
     <Nuxt />
   </div>
 </template>
 
 <script>
-import NavAll from "@/components/NavAll"
+import { v4 as uuidv4 } from 'uuid'
+import NavAll from '@/components/NavAll'
 export default {
-  name: "default",
+  name: 'Default',
   components: {
     NavAll
   }

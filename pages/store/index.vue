@@ -30,17 +30,17 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState } from 'vuex'
 
 export default {
-  layout: "mobile",
+  layout: 'mobile',
   computed: {
-    ...mapState({ message: "message" }),
-    ...mapState("a", { messageA: "message" }),
-    ...mapState("a/a", { messageA_A: "message" }),
-    ...mapState("b", { messageB: "message" })
+    ...mapState({ message: 'message' }),
+    ...mapState('a', { messageA: 'message' }),
+    ...mapState('a/a', { messageA_A: 'message' }),
+    ...mapState('b', { messageB: 'message' })
   }
-};
+}
 </script>
 
 <style></style>

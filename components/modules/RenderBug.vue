@@ -20,8 +20,8 @@
 
 <script>
 export default {
-  name: "RenderBug"
-};
+  name: 'RenderBug'
+}
 </script>
 
 <style></style>

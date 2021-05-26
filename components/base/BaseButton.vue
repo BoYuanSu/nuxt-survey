@@ -1,6 +1,6 @@
 <template>
   <button v-bind="$attrs" v-on="$listeners">
-      base button
+    base button
   </button>
 </template>
 

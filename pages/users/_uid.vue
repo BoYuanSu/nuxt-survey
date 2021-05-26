@@ -1,7 +1,7 @@
 <template>
   <div>
     _uid.vue
-      {{$route.params.uid}}
+    {{ $route.params.uid }}
   </div>
 </template>
 
