@@ -17,7 +17,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/styles/main.scss',
+    '~/assets/styles/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -34,7 +34,15 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/eslint-module'
   ],
+  // like Vue CLI Overlay Error Settings https://cli.vuejs.org/core-plugins/eslint.html#configuration
+  eslint: {
+    fix: true,
+    emitError: false,
+    emitWarning: true
+    /* module options */
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -43,7 +51,7 @@ export default {
   ],
 
   axios: {
-    baseURL: 'http://localhost:3000', // Used as fallback if no runtime config is provided
+    baseURL: 'http://localhost:3000' // Used as fallback if no runtime config is provided
   },
   publicRuntimeConfig: {
     axios: {
@@ -53,7 +61,7 @@ export default {
 
   privateRuntimeConfig: {
     axios: {
-      baseURL: process.env.BASE_URL   // BASE_URL for server side requests.
+      baseURL: process.env.BASE_URL // BASE_URL for server side requests.
     }
   },
   routerModule: {
