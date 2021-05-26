@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt-link to="/" no-prefetch class="button--grey">home</nuxt-link>
-    <nuxt-link to="/about" class="button--grey">about</nuxt-link>
+    <nuxt-link to="/store" class="button--grey">store</nuxt-link>
     <nuxt-link to="/lifecycle" class="button--grey">lifecycle by <code>nuxt-link</code></nuxt-link>
     <router-link to="/lifecycle" class="button--grey">lifecycle by <code>router-link</code></router-link>
     <a href="javascript:;" @click.prevent="$router.push('/lifecycle')" class="button--grey">lifecycle by a tag</a>

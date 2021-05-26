@@ -14,8 +14,8 @@ export function createRouter() {
         component: Home
       },
       {
-        path: '/about',
-        component: () => import('~/pages/about').then(m=>m.default)
+        path: '/store',
+        component: () => import('~/pages/store').then(m=>m.default)
       },
       {
         path: '/lifecycle',
