@@ -14,6 +14,7 @@ module.exports = {
     'no-debugger': 'off'
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    sourceType: 'module'
   }
 }
